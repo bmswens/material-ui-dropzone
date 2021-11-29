@@ -75,7 +75,9 @@ function SnackbarContentWrapper(props, ref) {
     );
 }
 
-SnackbarContentWrapper.propTypes = {
+const SnackBarContentWrapperFinal = React.forwardRef(SnackbarContentWrapper)
+
+SnackbarContentWrapperFinal.propTypes = {
     classes: PropTypes.object.isRequired,
     className: PropTypes.string,
     message: PropTypes.node,
@@ -83,4 +85,4 @@ SnackbarContentWrapper.propTypes = {
     variant: PropTypes.oneOf(['success', 'warning', 'error', 'info']).isRequired,
 };
 
-export default withStyles(styles, {name: 'MuiDropzoneSnackbar'})(React.forwardRef(SnackbarContentWrapper));
+export default withStyles(styles, {name: 'MuiDropzoneSnackbar'})(SnackBarContentWrapperFinal);
