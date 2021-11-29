@@ -44,7 +44,7 @@ const styles = (theme) => ({
     closeButton: {},
 });
 
-const  SnackbarContentWrapper = React.forwardRef((props, ref) => {
+const SnackbarContentWrapper = React.forwardRef((props, ref) => {
     const {classes, className, message, onClose, variant, ...other} = props;
     const Icon = variantIcon[variant];
 
@@ -75,7 +75,6 @@ const  SnackbarContentWrapper = React.forwardRef((props, ref) => {
     );
 })
 
-
 SnackbarContentWrapper.propTypes = {
     classes: PropTypes.object.isRequired,
     className: PropTypes.string,
@@ -84,4 +83,4 @@ SnackbarContentWrapper.propTypes = {
     variant: PropTypes.oneOf(['success', 'warning', 'error', 'info']).isRequired,
 };
 
-export default withStyles(styles, {name: 'MuiDropzoneSnackbar'})(SnackBarContentWrapper);
+export default withStyles(styles, {name: 'MuiDropzoneSnackbar'})(SnackbarContentWrapper);
