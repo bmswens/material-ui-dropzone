@@ -97,8 +97,7 @@ class DropzoneArea extends React.PureComponent {
         }, this.notifyFileChange);
     }
 
-    deleteFile = (event, removedFileObj, removedFileObjIdx) => {
-        event.stopPropagation();
+    deleteFile = (removedFileObj, removedFileObjIdx) => {
 
         const {onDelete} = this.props;
         const {fileObjects} = this.state;
